@@ -11,6 +11,9 @@ matplotlib>=1.4.3
 pandas>=0.19
 flasgger==0.9.4
 streamlit
+spacy>=2.1
+math
+en_core_web_sm
 
 
 
