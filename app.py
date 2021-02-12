@@ -5,19 +5,20 @@ def main():
 
 # Defining UI Code
 	st.set_page_config(
-     page_title="Text summarizer",
+     page_title="SkimView: Text summarizer",
      page_icon="🧊",
      #layout="wide",
      initial_sidebar_state="expanded")
 
 	html_temp = """
     <div style="background-color:#a2d0c1;padding:5px">
-    <h1 style="color:white;text-align:center;"> Text Summarizer App </h1>
+    <h1 style="color:white;text-align:center;">Skim View</h1>
 
     </div>
     """
 	st.markdown(html_temp,unsafe_allow_html=True)
-	st.subheader("Enter the text to summarize")
+	st.subheader("The SkimView app extracts the summary from the uploaded text. Try uploading the text from articles, textbook or journals and get the overall summary in seconds. You can choose between 3 summary lengths to view.")
+	st.header("Enter the text to summarize")
 	
 	text = st.text_area("",height=300)
 	key = st.button("Summarize")
@@ -78,7 +79,7 @@ def main():
 		# Choosing sentences with high score
 		from heapq import nlargest
 
-		st.subheader("Define the Summary length")
+		st.header("Define the Summary length")
 
 		level = st.selectbox("",options =['short','medium','long'])
 
